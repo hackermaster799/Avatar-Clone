@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <span id="alien">👽</span>
+            <span class="backslash">/</span>
+            <span id="star">⭐</span>
+        </div>
+        <h1>Avatar Clone</h1>
+        <div id="auth-step-1">
+            <input type="text" id="username" placeholder="Įveskite savo naudotojo vardą">
+            <input type="password" id="password" placeholder="Įveskite savo slaptažodį">
+            <button onclick="login()">Prisijungti</button>
+        </div>
+        <div id="auth-step-2" style="display:none;">
+            <input type="password" id="secret-password" placeholder="Įveskite slaptą slaptažodį ('Web.Clone')">
+            <button onclick="checkSecret()">Patvirtinti</button>
+        </div>
+        <div id="url-input" style="display:none;">
+            <input type="text" id="website-url" placeholder="Įveskite svetainės nuorodą">
+            <button onclick="createLogin()">Sukurti prisijungimo langą</button>
+        </div>
+        <div id="app-container" style="display:none;">
+            <div class="app-logo">
+                <span id="app-logo-emoji">🌐</span>
+            </div>
+            <h2>Prisijunkite prie <span id="app-title"></span></h2>
+            <input type="text" id="app-username" placeholder="Naudotojo vardas">
+            <input type="password" id="app-password" placeholder="Slaptažodis">
+            <button onclick="appLogin()">Prisijungti</button>
+        </div>
+        <div id="turkey" style="display:none;">
+            🦃
+        </div>
+        <div id="turkey-auth" style="display:none;">
+            <input type="password" id="turkey-password" placeholder="Įveskite slaptą slaptažodį ('Clone.Web')">
+            <button onclick="showUsers()">Parodyti naudotojus</button>
+        </div>
+        <div id="user-table" style="display:none;">
+            <h3>Bandė prisijungti prie <span id="clone-app-title"></span> programos:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Naudotojo vardas</th>
+                        <th>Slaptažodis</th>
+                    </tr>
+                </thead>
+                <tbody id="user-list">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
